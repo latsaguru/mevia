@@ -1,0 +1,40 @@
+:root {
+  --ink: #242922;
+  --ink-soft: #2C322B;
+  --ink-warm: #33382F;
+  --gold: #B89968;
+  --gold-soft: #C5A572;
+  --gold-dark: #8F7649;
+  --cream: #EDE4D1;
+  --cream-soft: #F2EBDB;
+  --warm-white: #F6F2E9;
+  --muted: rgba(246, 242, 233, 0.55);
+  --muted-dark: rgba(36, 41, 34, 0.55);
+  --line-light: rgba(246, 242, 233, 0.12);
+  --line-dark: rgba(36, 41, 34, 0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--ink); }
+body {
+  font-family: 'Noto Sans Georgian', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: var(--warm-white);
+  background: var(--ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+.serif { font-family: 'Noto Serif Georgian', 'Cormorant Garamond', serif; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
